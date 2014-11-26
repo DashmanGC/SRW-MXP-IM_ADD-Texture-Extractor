@@ -1,6 +1,18 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * Copyright (C) 2014 Dashman
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 package srwmxpim_addtextureextractor;
@@ -37,7 +49,7 @@ public class Main {
                 try{
                     insertRaw();
 
-                    return; // END
+                    //return; // END
                 }catch (IOException ex) {
                     System.err.println("ERROR: Couldn't read file.");   // END
                     Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
@@ -48,7 +60,7 @@ public class Main {
                     try{
                         extractRaw();
 
-                        return; // END
+                        //return; // END
                     }catch (IOException ex) {
                         System.err.println("ERROR: Couldn't read file.");   // END
                         Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
@@ -59,7 +71,7 @@ public class Main {
                     System.out.println("ERROR: Wrong number of parameters: " + args.length);
                     System.out.println("EXTRACT:\n java -jar im_extract -e");
                     System.out.println("INSERT:\n java -jar im_extract -i");
-                    return;
+                    //return;
                 }
             }
         }
@@ -148,7 +160,7 @@ public class Main {
             System.err.println("ERROR: Number of Font files incorrect. There should be 145 RAW_xx.bmp files.");
             System.out.println("Found " + listOfFiles.length + " files.");
             f_bin.close();
-            return;
+            //return;
         }
         else{
             for (int num = 0; num < 145; num++){
